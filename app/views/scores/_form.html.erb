@@ -1,0 +1,57 @@
+<%= form_with(model: score) do |form| %>
+  <% if score.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+        <% score.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :TeamA, style: "display: block" %>
+    <%= form.text_field :TeamA %>
+  </div>
+
+  <div>
+    <%= form.label :TeamB, style: "display: block" %>
+    <%= form.text_field :TeamB %>
+  </div>
+
+  <div>
+    <%= form.label :LogoA, style: "display: block" %>
+    <%= form.text_area :LogoA %>
+  </div>
+
+  <div>
+    <%= form.label :LogoB, style: "display: block" %>
+    <%= form.text_area :LogoB %>
+  </div>
+
+  <div>
+    <%= form.label :Date, style: "display: block" %>
+    <%= form.datetime_field :Date %>
+  </div>
+
+  <div>
+    <%= form.label :ResultA, style: "display: block" %>
+    <%= form.number_field :ResultA %>
+  </div>
+
+  <div>
+    <%= form.label :ResultB, style: "display: block" %>
+    <%= form.number_field :ResultB %>
+  </div>
+
+  <div>
+    <%= form.label :Description, style: "display: block" %>
+    <%= form.text_area :Description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

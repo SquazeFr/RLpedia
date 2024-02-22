@@ -1,45 +1,7 @@
-
-<div id="<%= dom_id score %>">
-  <p>
-    <strong>Teama:</strong>
-    <%= score.TeamA %>
-  </p>
-
-  <p>
-    <strong>Teamb:</strong>
-    <%= score.TeamB %>
-  </p>
-
-  <img src="<%= score.LogoA %>">
-   <img src="<%= score.LogoB %>">
- 
-  <p>
-    <strong>Date:</strong>
-    <%= score.Date %>
-  </p>
-
-  <p>
-    <strong>Resulta:</strong>
-    <%= score.ResultA %>
-  </p>
-
-  <p>
-    <strong>Resultb:</strong>
-    <%= score.ResultB %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= score.Description %>
-  </p>
-
-</div>
-
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <img src="<%= score.LogoA %>"> 
-    <img src="<%= score.LogoB %>">
+    <img src="<%= score.LogoA %>"> <img src="<%= score.LogoB %>">
     <h5 class="card-title"><%= score.TeamA %> vs <%= score.TeamB %></h5>
     <p class="card-score"><%= score.ResultA %> à <%= score.ResultB %></p>
     <p class="card-text"><%= score.Description %></p>

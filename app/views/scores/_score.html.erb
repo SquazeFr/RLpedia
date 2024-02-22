@@ -1,3 +1,4 @@
+
 <div id="<%= dom_id score %>">
   <p>
     <strong>Teama:</strong>
@@ -9,16 +10,9 @@
     <%= score.TeamB %>
   </p>
 
-  <p>
-    <strong>Logoa:</strong>
-    <%= score.LogoA %>
-  </p>
-
-  <p>
-    <strong>Logob:</strong>
-    <%= score.LogoB %>
-  </p>
-
+  <img src="<%= score.LogoA %>">
+   <img src="<%= score.LogoB %>">
+ 
   <p>
     <strong>Date:</strong>
     <%= score.Date %>

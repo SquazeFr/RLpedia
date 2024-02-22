@@ -1,6 +1,6 @@
 <%= form_with(model: score) do |form| %>
   <% if score.errors.any? %>
-    <div style="color: red">
+    <div style="color: red; text-align: center; font-size: 1.2em;">
       <h2><%= pluralize(score.errors.count, "error") %> prohibited this score from being saved:</h2>
 
       <ul>
@@ -11,47 +11,49 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :TeamA, style: "display: block" %>
-    <%= form.text_field :TeamA %>
-  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin: 2em; font-size: 1.2em;">
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :TeamA, style: "display: block; color: black" %>
+      <%= form.text_field :TeamA, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.label :TeamB, style: "display: block" %>
-    <%= form.text_field :TeamB %>
-  </div>
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :TeamB, style: "display: block; color: black" %>
+      <%= form.text_field :TeamB, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.label :LogoA, style: "display: block" %>
-    <%= form.text_area :LogoA %>
-  </div>
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :LogoA, style: "display: block; color: black" %>
+      <%= form.text_area :LogoA, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.label :LogoB, style: "display: block" %>
-    <%= form.text_area :LogoB %>
-  </div>
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :LogoB, style: "display: block; color: black" %>
+      <%= form.text_area :LogoB, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.label :Date, style: "display: block" %>
-    <%= form.datetime_field :Date %>
-  </div>
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :ResultA, style: "display: block; color: black" %>
+      <%= form.number_field :ResultA, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.label :ResultA, style: "display: block" %>
-    <%= form.number_field :ResultA %>
-  </div>
+  <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :ResultB, style: "display: block; color: black" %>
+      <%= form.number_field :ResultB, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.label :ResultB, style: "display: block" %>
-    <%= form.number_field :ResultB %>
-  </div>
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :Date, style: "display: block; color: black" %>
+      <%= form.datetime_field :Date, style: "width: 100%; padding: 0.5em;" %>
+    </div>  
 
-  <div>
-    <%= form.label :Description, style: "display: block" %>
-    <%= form.text_area :Description %>
-  </div>
+    <div style="flex: 1 0 45%; margin: 1em; padding: 1em;">
+      <%= form.label :Description, style: "display: block; color: black" %>
+      <%= form.text_area :Description, style: "width: 100%; padding: 0.5em;" %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div style="width: 100%; text-align: center; margin: 1em;">
+      <%= form.submit style: "padding: 1em; font-size: 1.2em;" %>
+    </div>
   </div>
 <% end %>

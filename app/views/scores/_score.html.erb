@@ -1,6 +1,6 @@
 
 <div class="card" style="width: 18rem;">
-  <div style='display:flex'>
+  <div style='display:grid'>
   <div><img src="<%= score.LogoA %>"></div>
   <div><img src="<%= score.LogoB %>"></div>
   </div>
@@ -19,5 +19,8 @@
   }
   .card {
     border-radius : 10px;
+  }
+  .card-body{
+    grid-row: 3;
   }
 </style>

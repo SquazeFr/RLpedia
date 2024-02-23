@@ -1,6 +1,8 @@
+<div class="row col-lg-12">
+  <% @scores.each do |scores| %>
 
 <div class="card" style="width: 18rem;">
-  <div style='display:grid'>
+  <div style='display:flex'>
   <div><img src="<%= score.LogoA %>"></div>
   <div><img src="<%= score.LogoB %>"></div>
   </div>
@@ -11,6 +13,10 @@
       <p class="card-date"><%= score.Date %></p>
     </div>
 </div>
+
+  <% end %>
+  </div>
+<%= link_to "New score", new_score_path %>
 
 <style>
   img{

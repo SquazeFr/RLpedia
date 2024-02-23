@@ -4,10 +4,12 @@
 
 <div id="scores">
   <% @scores.each do |score| %>
+  <div class="col-lg-3">
     <%= render score %>
     <p>
       <%= link_to "Show this score", score %>
     </p>
+    </div>
   <% end %>
 </div>
 
